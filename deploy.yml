@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-apk
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flask-apk  
+  template:
+    metadata:
+      labels:
+        app: flask-apk
+    spec:
+      containers:
+        - name: flask-apk
+          image: mdirshaq/flask-web-app:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
