@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: flask-apk
-          image: mdirshaq/flask-web-app:99
+          image: mdirshaq/flask-web-app:v3
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
